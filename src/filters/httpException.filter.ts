@@ -17,8 +17,6 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
     // 获取全部的错误信息
     const message = exception.getResponse() || exception.message;
-    console.log(exception.getResponse())
-    console.log(message)
     
     const errorResponse = {
       data: null,

@@ -1,3 +1,4 @@
+import { EquipmentModule } from './modules/equipment/equipment.module';
 import { ormConfig } from './config/config.dev';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -17,7 +18,8 @@ import { UserModule } from './modules/user/user.module';
       useFactory: ormConfig
     }),
     UserModule,
-    AuthModule
+    AuthModule,
+    EquipmentModule
 ],
   controllers: [AppController],
   providers: [AppService],
